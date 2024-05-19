@@ -1,0 +1,16 @@
+#path: E:\Downloads\tomatodata
+#train: train
+#val: val
+#test: test
+#
+#names:
+#  0: rotten
+#  1: fresh
+
+train: train/images
+val: val/images
+test: test/images
+
+path: E:\Downloads\tomatodata
+nc: 5
+names: ["0", "1", "Fresh Tomato", "Rotten Tomato", "object"]
