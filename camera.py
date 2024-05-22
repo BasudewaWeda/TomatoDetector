@@ -25,7 +25,11 @@ while True:
             cv2.rectangle(frame, (x_min, y_min), (x_max, y_max), (0, 255, 0), 2)
 
             confidence = box.conf[0]
-            class_name = "Fresh" if box.cls[0] == 2 else "Rotten"
+            class_name = ""
+            if box.cls[0] == 0 or box.cls[0] == 2:
+                class_name = "Fresh"
+            else:
+                class_name = "Rotten"
             cv2.putText(frame, f"{class_name} {confidence:.2f}", (int(x_min), int(y_min) - 5),
                         cv2.FONT_HERSHEY_SIMPLEX,
                         0.7,
