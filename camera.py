@@ -35,7 +35,7 @@ def process_frames():
         # Process the detection results
         for result in results:
             for box in result.boxes:
-                if box.conf[0] >= 0.8:
+                if box.conf[0] >= 0.8:  # Only process result if confidence is above a certain level
                     coordinates = box.xyxy[0]
                     x_min, y_min, x_max, y_max = int(coordinates[0]), int(coordinates[1]), int(coordinates[2]), int(
                         coordinates[3])
